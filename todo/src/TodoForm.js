@@ -3,12 +3,17 @@ import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import  useInputState from "./hooks/useInputState";
 
-function TodoForm(props){
+function TodoForm({addTodo}){
     const [value, handleChange, reset] = useInputState("");
     return(
         <Paper>
-            {value}
-            <TextField value={value} onChange={handleChange}/>
+            <form onSubmit={e=>{
+                e.preventDefault();
+                addTodo(value);
+                reset();
+            }}>
+                <TextField value={value} onChange={handleChange}/>
+            </form>
         </Paper>
     )
 }
