@@ -15,7 +15,14 @@ function TodoApp(){
                 backgroundColor:"#fafafa"
             }}
             elevation={0}
-        />
+        >
+            <AppBar color="primary" position="static" style={{height: "64px"}}>
+                <Toolbar>
+                    <Typography color="inherit">TODOS WITH HOOKS</Typography>
+                </Toolbar>
+            </AppBar>
+
+        </Paper>
     );
 }
 
