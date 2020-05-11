@@ -9,8 +9,8 @@ function TodoList({todos, removeTodo, toggleTodo, editTodo}){
     return(
     <Paper>
         <List>
-            {todos.map(todo=>(
-                
+            {todos.map((todo,i)=>(
+                <>
                 <Todo 
                 id={todo.id}
                 task={todo.task} 
@@ -19,7 +19,9 @@ function TodoList({todos, removeTodo, toggleTodo, editTodo}){
                 removeTodo={removeTodo}
                 toggleTodo={toggleTodo}
                 editTodo={editTodo}
-                />                
+                />      
+                {i < todos.length - 1 && <Divider/>}
+                </>          
             ))}
         </List>
     </Paper>
