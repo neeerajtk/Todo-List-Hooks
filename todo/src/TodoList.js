@@ -12,6 +12,7 @@ function TodoList() {
       <Paper>
         <List>
           {todos.map((todo, i) => (
+            
             <React.Fragment key={i}>
               <Todo {...todo} key={todo.id} />
               {i < todos.length - 1 && <Divider />}
