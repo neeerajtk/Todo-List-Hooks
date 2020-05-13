@@ -1,4 +1,4 @@
-import uuid from "uuid/v4";
+import uuid from "uuid/dist/v4";
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
